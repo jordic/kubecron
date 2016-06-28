@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: kubecron
+spec:
+  replicas: 1
+  selector:
+    name: kubecron
+  template:
+    metadata:
+      labels:
+        name: kubecron
+        version: r1
+    spec:
+      containers:
+      - name: kubecron
+        image: {{project_repo}}/cron:r1
+        resources:
+          limits:
+            cpu: 10m
+            memory: 20Mi

@@ -1,0 +1,10 @@
+[
+  {
+    "cmd": "kubectl get pods",
+    "when": "@every 10s"
+  },
+  {
+    "cmd": "echo 'hola nanu'",
+    "when": "@every 1s"
+  }
+]

@@ -1,0 +1,6 @@
+[
+  {
+    "cmd": "/bin/show_pods.sh",
+    "when": "@every 2h"
+  }
+]
